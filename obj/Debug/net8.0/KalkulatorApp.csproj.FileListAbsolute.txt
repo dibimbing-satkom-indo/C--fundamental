@@ -1,0 +1,14 @@
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/bin/Debug/net8.0/KalkulatorApp
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/bin/Debug/net8.0/KalkulatorApp.deps.json
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/bin/Debug/net8.0/KalkulatorApp.runtimeconfig.json
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/bin/Debug/net8.0/KalkulatorApp.dll
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/bin/Debug/net8.0/KalkulatorApp.pdb
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/obj/Debug/net8.0/KalkulatorApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/obj/Debug/net8.0/KalkulatorApp.AssemblyInfoInputs.cache
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/obj/Debug/net8.0/KalkulatorApp.AssemblyInfo.cs
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/obj/Debug/net8.0/KalkulatorApp.csproj.CoreCompileInputs.cache
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/obj/Debug/net8.0/KalkulatorApp.dll
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/obj/Debug/net8.0/refint/KalkulatorApp.dll
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/obj/Debug/net8.0/KalkulatorApp.pdb
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/obj/Debug/net8.0/KalkulatorApp.genruntimeconfig.cache
+/Users/bowobudiprasetyo/Documents/microsoft-stuff/KalkulatorApp/obj/Debug/net8.0/ref/KalkulatorApp.dll
