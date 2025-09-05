@@ -59,6 +59,78 @@ CREATE TABLE OrderItems (
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
 );
 
+CREATE TABLE Users (
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
+    Username NVARCHAR(50) UNIQUE NOT NULL,
+    PasswordHash NVARCHAR(255) NOT NULL,
+    Role NVARCHAR(20) DEFAULT 'Customer', -- Admin, Seller, Customer
+    CreatedAt DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE Addresses (
+    AddressID INT IDENTITY(1,1) PRIMARY KEY,
+    CustomerID INT NOT NULL,
+    AddressLine NVARCHAR(200) NOT NULL,
+    City NVARCHAR(100),
+    Province NVARCHAR(100),
+    PostalCode NVARCHAR(10),
+    Country NVARCHAR(50) DEFAULT 'Indonesia',
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+CREATE TABLE Payments (
+    PaymentID INT IDENTITY(1,1) PRIMARY KEY,
+    OrderID INT NOT NULL,
+    PaymentDate DATETIME DEFAULT GETDATE(),
+    Amount DECIMAL(10,2) NOT NULL,
+    PaymentMethod NVARCHAR(50), -- Transfer, COD, Credit Card, E-Wallet
+    Status NVARCHAR(20) DEFAULT 'Pending',
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+);
+
+CREATE TABLE Shipments (
+    ShipmentID INT IDENTITY(1,1) PRIMARY KEY,
+    OrderID INT NOT NULL,
+    Courier NVARCHAR(50), -- JNE, TIKI, SiCepat, dll
+    TrackingNumber NVARCHAR(100),
+    ShippedDate DATETIME,
+    DeliveryDate DATETIME,
+    Status NVARCHAR(20) DEFAULT 'On Process',
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+);
+
+CREATE TABLE Shipments (
+    ShipmentID INT IDENTITY(1,1) PRIMARY KEY,
+    OrderID INT NOT NULL,
+    Courier NVARCHAR(50), -- JNE, TIKI, SiCepat, dll
+    TrackingNumber NVARCHAR(100),
+    ShippedDate DATETIME,
+    DeliveryDate DATETIME,
+    Status NVARCHAR(20) DEFAULT 'On Process',
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+);
+
+CREATE TABLE Reviews (
+    ReviewID INT IDENTITY(1,1) PRIMARY KEY,
+    ProductID INT NOT NULL,
+    CustomerID INT NOT NULL,
+    Rating INT CHECK (Rating BETWEEN 1 AND 5),
+    Comment NVARCHAR(500),
+    ReviewDate DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+CREATE TABLE ShoppingCart (
+    CartID INT IDENTITY(1,1) PRIMARY KEY,
+    CustomerID INT NOT NULL,
+    ProductID INT NOT NULL,
+    Quantity INT NOT NULL,
+    AddedAt DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
 -- ========================================
 -- INSERT SAMPLE DATA
 -- ========================================
